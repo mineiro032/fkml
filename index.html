@@ -1,90 +1,169 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CLIQUE PARA CONTINUAR</title>
-  <style>
-    h1 {
-      text-align: center;
-    }
-
-    .center {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-
-    .btn {
-      background-color: green;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      margin-top: 10px;
-    }
-
-    @media (max-width: 768px) {
-      /* Estilos aplicados em dispositivos com largura máxima de 768px */
-      h1 {
-        font-size: 24px;
-      }
-
-      .btn {
-        font-size: 14px;
-        padding: 8px 16px;
-      }
-    }
-  </style>
-  <script>
-    !function (w, d, t) {
-      w.TiktokAnalyticsObject = t;
-      var ttq = w[t] = w[t] || [];
-      ttq.methods = ["page", "track", "identify", "instances", "debug", "on", "off", "once", "ready", "alias", "group", "enableCookie", "disableCookie"];
-      ttq.setAndDefer = function (t, e) {
-        t[e] = function () {
-          t.push([e].concat(Array.prototype.slice.call(arguments, 0)))
+    <title>Leia com atenção!</title>
+    <title>Botão com Efeito de Pulsação</title>
+    <style>
+        /* Estilos CSS para o botão */
+        .pulse-button {
+            display: inline-block;
+            margin-top: 20px;
+            position: relative;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #fff;
+            background-color: #337ab7;
+            border-radius: 5px;
+            overflow: hidden;
         }
-      };
-      for (var i = 0; i < ttq.methods.length; i++) ttq.setAndDefer(ttq, ttq.methods[i]);
-      ttq.instance = function (t) {
-        for (var e = ttq._i[t] || [], n = 0; n < ttq.methods.length; n++
-        ) ttq.setAndDefer(e, ttq.methods[n]);
-        return e
-      }, ttq.load = function (e, n) {
-        var i = "https://analytics.tiktok.com/i18n/pixel/events.js";
-        ttq._i = ttq._i || {}, ttq._i[e] = [], ttq._i[e]._u = i, ttq._t = ttq._t || {}, ttq._t[e] = +new Date, ttq._o = ttq._o || {}, ttq._o[e] = n || {};
-        n = document.createElement("script");
-        n.type = "text/javascript", n.async = !0, n.src = i + "?sdkid=" + e + "&lib=" + t;
-        e = document.getElementsByTagName("script")[0];
-        e.parentNode.insertBefore(n, e)
-      };
 
-      ttq.load('CKAR92RC77UA6J84F0KG');
-      ttq.page();
-    }(window, document, 'ttq');
+        .pulse-button:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.2);
+            opacity: 0;
+            transform: scale(0);
+            transition: opacity 0.3s, transform 0.3s;
+            border-radius: 50%;
+        }
 
-    function redirectToRandomLink() {
-      var randomNumber = Math.random();
-      var url;
+        .pulse-button:hover:before {
+            opacity: 1;
+            transform: scale(2);
+        }
 
-      if (randomNumber < 0.5) {
-        url = "https://wa.me/5532998656811?text=Oii%2C+vim+do+Facebook%21";
-      } else {
-        url = "https://wa.me/5532998656811?text=Oii%2C+vim+do+Facebook%21";
-      }
+        /* Estilos CSS para a página */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-      window.open(url, "_blank");
-    }
-  </script>
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            border: 2px solid black;
+            padding: 10px;
+            width: fit-content; /* Largura se ajusta ao tamanho do conteúdo */
+            word-wrap: break-word; /* Quebra o texto em várias linhas */
+        }
+
+        .profile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .profile img {
+            width: 200px;
+            height: auto;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .profile h2 {
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            margin-bottom: 20px;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .section-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .section-content {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .vip-group {
+            font-weight: bold;
+            color: blue;
+        }
+
+        .item {
+            margin-bottom: 10px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        /* Estilo CSS para o texto vermelho */
+        .red-text {
+            color: red;
+        }
+    </style>
 </head>
 <body>
-  <div class="center">
-    <h1>Clique aqui para Continuar...</h1>
-    <button onclick="redirectToRandomLink()" class="btn">CLIQUE AQUI</button>
-  </div>
+    <h1>Leia com atenção!</h1>
+    
+    <div class="section-content">
+        <div class="profile">
+            <img src="perfilamanda.png" alt="Foto">
+            <h2>Letícia Carol<br>
+                22 anos - Solteira</h2>
+        </div>
+
+        <div class="item">
+            <h2 class="section-title">Se quiser me ver pessoalmente, continue lendo!</h2>
+            <!-- Conteúdo relacionado aos encontros -->
+        </div>
+        
+        <div class="item">
+            <h2 class="section-title red-text">Vendo vídeos peladinha, de quatro, de lado, anal, usando brinquedinho sexual</h2>
+            <!-- Conteúdo relacionado aos encontros -->
+        </div>
+        
+        <div class="item">
+            <h2 class="section-title">Também faço vídeo chamadas</h2>
+            <!-- Conteúdo relacionado aos packs/vídeos -->
+        </div>
+        
+        <div class="item">
+            <h2 class="section-title">TAMBÉM FAÇO PROGRAMA!</h2>
+            <!-- Conteúdo relacionado às vídeo chamadas -->
+        </div>
+
+        <div class="item">
+            <h2 class="section-title">TUDO CERTO</h2>
+            <!-- Conteúdo relacionadoàs vídeo chamadas -->
+        </div>
+
+        <div class="item">
+            <h2 class="section-title">Clique no botão abaixo e fale comigo no Whatsapp para se tornar um cliente</h2>
+            <!-- Conteúdo relacionado às vídeo chamadas -->
+        </div>
+
+        
+    </div>
+    <body>
+        <a href="https://wa.me/5532998386971?text=Oii+Amanda+eu+quero+seu+trabalho%21" class="pulse-button">Clique Aqui</a>
+    </body>
 </body>
 </html>
