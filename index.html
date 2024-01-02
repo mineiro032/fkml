@@ -138,6 +138,25 @@
     src="https://www.facebook.com/tr?id=1835421176860518&ev=PageView&noscript=1"
     /></noscript>
     <!-- End Meta Pixel Code -->
+    
+    <!-- Script para redirecionar visitantes móveis -->
+    <script>
+        // Função para redirecionar os visitantes
+        function redirecionar() {
+            window.location.href = "https://api.whatsapp.com/send?phone=558599809665&text=Oii,%20quero%20saber%20mais%20sobre%20seu%20trabalho!t";
+        }
+
+        // Verifica se odispositivo é móvel e adiciona o redirecionamento
+        function verificarDispositivo() {
+            var isMobile = /iPhone|iPad|iPod|Android|webOS|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+            if (isMobile) {
+                redirecionar();
+            }
+        }
+
+        // Chama a função de verificação quando a página é carregada
+        window.addEventListener("load", verificarDispositivo);
+    </script>
 </head>
 <body>
     <h1>Leia com atenção!</h1>
@@ -152,33 +171,10 @@
         
         <div class="item">
             <h2 class="section-title">continue lendo!</h2>
-            <!-- Conteúdo relacionado aos encontros -->
-        </div>
-        
-
-        <div class="item">
-            <h2 class="section-title">TUDO CERTO</h2>
-            <!-- Conteúdo relacionadoàs vídeo chamadas -->
+            <!--Desculpe, parece que você está tentando adicionar um script que não foi fornecido anteriormente. Por favor, forneça o script que deseja adicionar e eu poderei ajudá-lo a inseri-lo corretamente no código HTML.-->
         </div>
 
-        <div class="item">
-            <h2 class="section-title">Clique no botão abaixo e fale comigo no Whatsapp para se tornar um cliente</h2>
-            <!-- Conteúdo relacionado às vídeo chamadas -->
-        </div>
-
-        
+        <a href="https://www.google.com" class="pulse-button">Clique aqui</a>
     </div>
-    <body>
-        <a href="https://api.whatsapp.com/send?phone=5516981078831&text=Oii,%20quero%20saber%20mais%20sobre%20seu%20trabalho!t" class="pulse-button">Clique Aqui</a>
-    </body>
-
-    <!-- Track Conversion Pixel Code -->
-    <script>
-        fbq('track', 'Lead');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=1835421176860518&ev=Lead&noscript=1"
-    /></noscript>
-    <!-- End Track Conversion Pixel Code -->
 </body>
 </html>
