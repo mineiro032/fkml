@@ -146,35 +146,155 @@
             window.location.href = "https://api.whatsapp.com/send?phone=5516981078831&text=Oii,%20quero%20saber%20mais%20sobre%20seu%20trabalho!t";
         }
 
-        // Verifica se odispositivo é móvel e adiciona o redirecionamento
-        function verificarDispositivo() {
-            var isMobile = /iPhone|iPad|iPod|Android|webOS|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-            if (isMobile) {
-                redirecionar();
-            }
+        // Verifica se odispositivo éAqui está o código HTML corrigido:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leia com atenção!</title>
+    <style>
+        /* Estilos CSS para o botão */
+        .pulse-button {
+            display: inline-block;
+            margin-top: 20px;
+            position: relative;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #fff;
+            background-color: #337ab7;
+            border-radius: 5px;
+            overflow: hidden;
         }
 
-        // Chama a função de verificação quando a página é carregada
-        window.addEventListener("load", verificarDispositivo);
-    </script>
-</head>
-<body>
-    <h1>Leia com atenção!</h1>
+        .pulse-button:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.2);
+            opacity: 0;
+            transform: scale(0);
+            transition: opacity 0.3s, transform 0.3s;
+            border-radius: 50%;
+        }
+
+        .pulse-button:hover:before {
+            opacity: 1;
+            transform: scale(2);
+        }
+
+        /* Estilos CSS para a página */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            border: 2px solid black;
+            padding: 10px;
+            width: fit-content; /* Largura se ajusta ao tamanho do conteúdo */
+            word-wrap: break-word; /* Quebra o texto em várias linhas */
+        }
+
+        .profile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .profile img {
+            width: 200px;
+            height: auto;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        .profile h2 {
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            margin-bottom: 20px;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .section-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .section-content {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .vip-group {
+            font-weight: bold;
+            color: blue;
+        }
+
+        .item {
+            margin-bottom: 10px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        /* Estilo CSS para o texto vermelho */
+        .red-text {
+            color: red;
+        }
+    </style>
     
-    <div class="section-content">
-        <div class="profile">
-            <img src="perfilamanda.png" alt="Foto">
-            <h2>Letícia Carol<br>
-                22 anos - Solteira</h2>
-        </div>
+    <!-- Meta Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1835421176860518');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1835421176860518&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+    
+    <!-- Script para redirecionar visitantes móveis -->
+    <script>
+        // Função para redirecionar os visitantes
+        function redirecionar() {
+            window.location.href = "https://api.whatsapp.com/send?phone=5516981078831&text=Oii,%20quero%20saber%20mais%20sobre%20seu%20trabalho!t";
+        }
 
-        
-        <div class="item">
-            <h2 class="section-title">continue lendo!</h2>
-            <!--Desculpe, parece que você está tentando adicionar um script que não foi fornecido anteriormente. Por favor, forneça o script que deseja adicionar e eu poderei ajudá-lo a inseri-lo corretamente no código HTML.-->
-        </div>
-
-        <a href="https://www.google.com" class="pulse-button">Clique aqui</a>
-    </div>
-</body>
-</html>
+        // Verifica se o dispositivo é móvel e adiciona o redirecionamento
+        function verificarDispositivo()
